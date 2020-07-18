@@ -18,6 +18,7 @@ authentication:
     successfulLogout: "Successfully logged out."
     passwordIsTooLong: "Password must not contain more than 32 characters."
     passwordIsTooShort: "Password must contain at least 8 characters."
+    whileUserIsNotLoggedIn: "You are not logged. Use \"/login <password>\" command to login."
   password:
     length:
       min: 8
