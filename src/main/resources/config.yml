@@ -1,0 +1,24 @@
+authentication:
+  database:
+    mongodb:
+      uri: mongodb://localhost:27017/authDb
+  messages:
+    notRegisteredUser: "You are not registered."
+    userAlreadyExists: "You are already registered."
+    userAlreadyLoggedIn: "You are already logged in."
+    wrongPassword: "Wrong password."
+    successfulLogin: "Successfully logged in."
+    loginUsage: "Usage: /login <password>"
+    invalidPassword: "Invalid password."
+    successfulPasswordReset: "Password change successful."
+    passwordChangeUsage: "Usage: /changepassword <old_password> <new_password> <new_password_again>"
+    passwordMismatch: "Password mismatch."
+    successfulRegistration: "Successfully registered."
+    registrationUsage: "Usage: /register <password> <password_again>"
+    successfulLogout: "Successfully logged out."
+    passwordIsTooLong: "Password must not contain more than 32 characters."
+    passwordIsTooShort: "Password must contain at least 8 characters."
+  password:
+    length:
+      min: 8
+      max: 32
