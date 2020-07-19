@@ -7,7 +7,7 @@ authentication:
     userAlreadyExists: "You are already registered."
     userAlreadyLoggedIn: "You are already logged in."
     wrongPassword: "Wrong password."
-    successfulLogin: "Successfully logged in."
+    successfulLogin: "§bSuccessfully §clogged in."
     loginUsage: "Usage: /login <password>"
     invalidPassword: "Invalid password."
     successfulPasswordReset: "Password change successful."

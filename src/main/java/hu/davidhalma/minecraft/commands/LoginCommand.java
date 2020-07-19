@@ -1,11 +1,11 @@
 package hu.davidhalma.minecraft.commands;
 
 import dev.alangomes.springspigot.context.Context;
-import hu.davidhalma.minecraft.exception.NotRegisteredUser;
-import hu.davidhalma.minecraft.service.Authentication;
 import hu.davidhalma.minecraft.config.Messages;
+import hu.davidhalma.minecraft.exception.NotRegisteredUser;
 import hu.davidhalma.minecraft.exception.UserAlreadyLoggedIn;
 import hu.davidhalma.minecraft.exception.WrongPassword;
+import hu.davidhalma.minecraft.service.Authentication;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.entity.Player;
@@ -42,7 +42,9 @@ public class LoginCommand implements Runnable {
     }
     try {
       authentication.login(player.getUniqueId().toString(), password[0]);
-      player.sendMessage(messages.getSuccessfulLogin());
+
+      String message = messages.getSuccessfulLogin();
+      player.sendMessage(message);
     } catch (WrongPassword | NotRegisteredUser | UserAlreadyLoggedIn exception) {
       player.sendMessage(exception.getMessage());
     }

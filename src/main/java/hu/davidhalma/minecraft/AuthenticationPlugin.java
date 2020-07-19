@@ -17,7 +17,7 @@ public class AuthenticationPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        saveConfig();
+        saveDefaultConfig();
 
         ClassLoader classLoader = getClassLoader();
         ResourceLoader loader = new DefaultResourceLoader(classLoader);

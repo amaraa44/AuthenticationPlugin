@@ -44,7 +44,9 @@ public class EventListeners implements Listener {
         if (authentication.loggedIn(player.getUniqueId().toString())){
           cancel();
         }
-        player.sendMessage(messages.getWhileUserIsNotLoggedIn());
+        if (!authentication.loggedIn(player.getUniqueId().toString())){
+          player.sendMessage(messages.getWhileUserIsNotLoggedIn());
+        }
       }
     }.runTaskTimerAsynchronously(JavaPlugin.getProvidingPlugin(AuthenticationPlugin.class), 0, 320);
 
