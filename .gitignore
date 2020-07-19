@@ -136,4 +136,4 @@ gradle-app.setting
 
 testserver
 buildtools
-config
+/config
